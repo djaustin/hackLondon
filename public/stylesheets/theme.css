@@ -58,6 +58,23 @@ div#counter {
   	color: 364F6B;
 }
 
+div#countdown {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+    letter-spacing: -6px;
+    font-size: 3.6em;
+    font-family: sans-serif;
+    color: fff;
+    background-color: FC5185; 
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    border-color: fd81a7;
+    border-width: 4px;
+    padding: 3px 
+}
+
 input[type="submit"]:active {
   cursor: pointer;
   background: linear-gradient(feb4ca, fd6895);

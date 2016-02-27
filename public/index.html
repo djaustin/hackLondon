@@ -5,11 +5,26 @@
 	<script>
 		var pusher = new Pusher('04e85a9074feed5e17cb');
 	</script> 
+	<script>
+		var timeLeft = 30;
+		var timerId = setInterval(countdown, 1000);
+
+		function countdown() {
+		  if (timeLeft == 0) {
+		    document.getElementById('countdown').innerHTML = "0";
+		  } else {
+		    document.getElementById('countdown').innerHTML = timeLeft;
+		    timeLeft--;
+		  }
+		}
+	</script>
     <link href="stylesheets/theme.css" rel="stylesheet">
 </head>
+
 <body>
 	<div id="headLine">Decide<div class="theFour">4</div>Me</div>
 	<center>
+		<div id="countdown">30</div>
 		<div id="button"><input type="submit" ng-click="submit()"></input></div>
 		<div id="counter">0</div>
 	</center>
