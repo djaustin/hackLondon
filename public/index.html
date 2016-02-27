@@ -1,16 +1,52 @@
 <DOCTYPE! html>
 <head>
-	<title>Decide4Me</title>	  
+	<title>Decide4Me</title>
 	<script src="https://js.pusher.com/3.0/pusher.min.js"></script>
 	<script>
 		var pusher = new Pusher('04e85a9074feed5e17cb');
 	</script> 
-    <link href="style/theme.css" rel="stylesheet">
+	<script>
+		var timeLeft = 30;
+		var timerId = setInterval(countdown, 1000);
+
+		function countdown() {
+		  if (timeLeft == 0) {
+		    document.getElementById('countdown').innerHTML = "0";
+		  } else {
+		    document.getElementById('countdown').innerHTML = timeLeft;
+		    timeLeft--;
+		  }
+		}
+
+		function newField(divName) {
+			var additionalField = document.createElement('div');
+			additionalField.innerHTML = " <input type='text' placeholder='Option...'> "
+			document.getElementById(divName).appendChild(additionalField);
+		}
+	</script>
+	<script>
+
+	</script>
+    <link href="stylesheets/theme.css" rel="stylesheet">
 </head>
+
 <body>
 	<div id="headLine">Decide<div class="theFour">4</div>Me</div>
 	<center>
+		<div id="question">
+				<div id="titles">Enter your question:</div>
+			    <input type="text" placeholder="Question...">
+		</div>
+		<form method="POST">
+			<div id="options">
+				<div id="titles">Enter your options:</div>
+				<div id="optionarea">
+					<input type="text" placeholder="Option...">
+				</div> 
+				<div id="addField" onclick="newField('optionarea')">+</div>
+			</div>
+		</form>
+
 		<div id="button"><input type="submit" ng-click="submit()"></input></div>
-		<div id="counter">0</div>
 	</center>
 </body>
