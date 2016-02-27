@@ -19,7 +19,8 @@ fs.readFile('wordlists/adjectives.txt', "utf-8", (err, data) => {
 })
 
 function capitalizeFirstLetter(string){
-  return string.charAt(0).toUpperCase() + string.slice(1);
+  return (string.charAt(0).toUpperCase() + string.slice(1)).replace("-", "");
+
 }
 
 function sampleArray(array){

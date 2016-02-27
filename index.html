@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Testing...</title>
+    <script src="http://js.pusher.com/3.0/pusher.min.js"></script>
+    <script>
+      var pusher = new Pusher('9ad88e27945db055b097');
+      var channel = pusher.subscribe('test_channel');
+      channel.bind('test_event', function(data) {
+        alert("Message received: " + data.message);
+      })
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
