@@ -1,0 +1,74 @@
+body {
+  background-color: #F5F5F5;
+}
+
+div#headLine {
+	text-align: center;
+  	letter-spacing: -6px;
+  	font-size: 3.6em;
+  	font-family: sans-serif;
+  	color: fff;
+  	width: 100%;
+  	background-color: 364F6B;
+}
+
+div#headLine .theFour {
+	display: inline;
+  	letter-spacing: -6px;
+  	font-size: 1em;
+  	font-weight: bold;
+  	color: FC5185;
+}
+
+input[type="submit"] {
+	cursor: pointer;
+  background: linear-gradient(c9033e, 97022f);
+  border-radius: 5px;
+  box-shadow: inset 0px 1px 0px #fd81a7;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #64021f;
+  text-shadow: 0px 1px 0px #fc3671;
+  font-size: 30px;
+  padding: 4px;
+  transition: 0.5s;
+  border: 1px;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  background: linear-gradient(fd6895, fc5185);
+  border-radius: 5px;
+  box-shadow: inset 0px 1px 0px #fd81a7;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #e20346;
+  text-shadow: 0px 1px 0px #fc3671;
+  font-size: 30px;
+  padding: 4px;
+  transition: 0.5s;
+  border: 1px;
+}
+
+div#counter {
+	text-align: center;
+  	letter-spacing: -6px;
+  	font-size: 3.6em;
+  	font-family: sans-serif;
+  	color: 364F6B;
+}
+
+input[type="submit"]:active {
+  cursor: pointer;
+  background: linear-gradient(feb4ca, fd6895);
+  border-radius: 5px;
+  box-shadow: inset 0px 1px 0px #fd81a7;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #e20346;
+  text-shadow: 0px 1px 0px #fc3671;
+  font-size: 30px;
+  padding: 4px;
+  transition: 0.5s;
+  border: 1px;
+}
