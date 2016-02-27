@@ -50,12 +50,50 @@ input[type="submit"]:hover {
   border: 1px;
 }
 
+div#titles {
+    text-align: center;
+    letter-spacing: -3px;
+    font-size: 2em;
+    font-family: sans-serif;
+    color: b3b3b3;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 0px 1px 0px #fff;
+}
+
+div#addField {
+    cursor: pointer;
+    display: inline;
+    letter-spacing: -3px;
+    font-size: 3em;
+    padding: 10px;
+    font-family: sans-serif;
+    color: b3b3b3;
+    font-weight: bold;
+    text-shadow: 0px 1px 0px #fff;
+    transition: 0.5s;
+    margin-left: 5px;
+}
+
+div#addField:hover {
+    cursor: pointer;
+    display: inline;
+    letter-spacing: -3px;
+    font-size: 3em;
+    font-family: sans-serif;
+    color: 808080;
+    font-weight: bold;
+    text-shadow: 0px 1px 0px #fff;
+    transition: 0.5s;
+}
+
 div#counter {
 	text-align: center;
   	letter-spacing: -6px;
-  	font-size: 3.6em;
+  	font-size: 3.4em;
   	font-family: sans-serif;
   	color: 364F6B;
+    margin-bottom: 15px;
 }
 
 div#countdown {
@@ -88,4 +126,25 @@ input[type="submit"]:active {
   padding: 4px;
   transition: 0.5s;
   border: 1px;
+}
+
+input[type="text"] {
+  display: inline;
+  margin: 0;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 5px;
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+  margin-bottom: 20px;
+  width: 50%;
+}
+input[type="text"]:focus {
+  outline: none;
+  border: solid 1px #fb044e;
+  box-shadow: 0 0 5px 1px #FC5185;
 }
