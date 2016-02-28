@@ -4,17 +4,23 @@ var mongodb = require('mongodb');
 var client = mongodb.MongoClient;
 var url = "mongodb://127.0.0.1:27017/mydb"
 
-router.get('/new', function(req, res) {
+router.get('/new', function(req, res, next) {
   var question = req.query.question;
   var options = req.query.options;
   client.connect(url, function(err, db) {
     if (!err){
       console.log("Connected to server!");
-      console.log();
-      var coll = db.collection('questions')
+      var coll = db.collection('questions');
+      var optionObjs = []
+      options.forEach(opt => {
+        optionObjs.push({
+          "text": opt,
+          "votes": 0
+        })
+      })
       coll.insert({
         "title": question,
-        "options": options
+        "options": optionObjs
       })
 
       db.close();
@@ -23,4 +29,9 @@ router.get('/new', function(req, res) {
     }
   })
 
+  console.log('/public/index.html')
+  res.redirect('/')
 })
+
+module.exports = router;
+

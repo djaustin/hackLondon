@@ -20,7 +20,7 @@
 
 		function newField(divName) {
 			var additionalField = document.createElement('div');
-			additionalField.innerHTML = " <input type='text' placeholder='Option...'> "
+			additionalField.innerHTML = " <input type='text' placeholder='Option...' name='options[]'> "
 			document.getElementById(divName).appendChild(additionalField);
 		}
 	</script>
@@ -33,20 +33,21 @@
 <body>
 	<div id="headLine">Decide<div class="theFour">4</div>Me</div>
 	<center>
+		<form action="/questions/new" method="GET">
 		<div id="question">
 				<div id="titles">Enter your question:</div>
-			    <input type="text" placeholder="Question...">
+			    <input type="text" placeholder="Question..." name="question">
 		</div>
-		<form method="POST">
 			<div id="options">
 				<div id="titles">Enter your options:</div>
 				<div id="optionarea">
-					<input type="text" placeholder="Option...">
+					<input type="text" placeholder="Option..." name="options[]">
 				</div> 
 				<div id="addField" onclick="newField('optionarea')">+</div>
 			</div>
-		</form>
+		
 
 		<div id="button"><input type="submit" ng-click="submit()"></input></div>
+		</form>
 	</center>
 </body>
