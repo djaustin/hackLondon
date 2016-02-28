@@ -29,25 +29,29 @@
 	</script>
     <link href="stylesheets/theme.css" rel="stylesheet">
 </head>
-
 <body>
-	<div id="headLine">Decide<div class="theFour">4</div>Me</div>
-	<center>
-		<form action="/questions/new" method="GET">
-		<div id="question">
-				<div id="titles">Enter your question:</div>
-			    <input type="text" placeholder="Question..." name="question">
-		</div>
-			<div id="options">
-				<div id="titles">Enter your options:</div>
-				<div id="optionarea">
-					<input type="text" placeholder="Option..." name="options[]">
-				</div> 
-				<div id="addField" onclick="newField('optionarea')">+</div>
+	<div id="container">
+		<div id="headLine">Settle<div class="theFour">4</div>Me</div>
+		<center>
+			<form action="/questions/new" method="GET">
+			<div id="question">
+					<div id="titles">Enter your question:</div>
+				    <input type="text" placeholder="Question..." name="question">
 			</div>
-		
+				<div id="options">
+					<div id="titles">Enter your options:</div>
+					<div id="optionarea">
+						<input type="text" placeholder="Option..." name="options[]">
+					</div> 
+					<div id="addField" onclick="newField('optionarea')">+</div>
+				</div>
+			
 
-		<div id="button"><input type="submit" ng-click="submit()"></input></div>
-		</form>
-	</center>
+			<div id="button"><input type="submit" ng-click="submit()"></input></div>
+			</form>
+		</center>
+	</div>
+	<div id="footer">
+		Created by <a href="mailto:danieljohnaustin@gmail.com">Daniel Austin</a> & <a href="mailto:benny@onaitis.co.uk"> Benny Onaitis</a>.
+	</div> 
 </body>

@@ -3,7 +3,7 @@ body {
 }
 
 div#headLine {
-	text-align: center;
+	  text-align: center;
   	letter-spacing: -6px;
   	font-size: 3.6em;
   	font-family: sans-serif;
@@ -148,3 +148,43 @@ input[type="text"]:focus {
   border: solid 1px #fb044e;
   box-shadow: 0 0 5px 1px #FC5185;
 }
+
+div#footer {
+  text-align: center;
+  font-family: sans-serif;
+  background: linear-gradient(#a6a6a6, #cccccc);
+  clear: both;
+  position: fixed;
+  bottom: 0;box-shadow: 0px 1px 0px #fff, inset 0px 1px 3px #737373;
+  font-size: 11px;
+  color: 333333;
+  text-shadow: 0px 1px 0px #fff;
+  width: 100%; 
+  height: 3em;
+  left:0px;
+  right:0px;
+  line-height: 3em;
+}
+
+div#footer a:link {
+  color: fb044e;
+  text-shadow: 0px 1px 0px #fff;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+div#footer a:hover {
+  color: fd81a7;
+  text-shadow: 0px 1px 0px #fff;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+div#footer a:active {
+  color: b00337;
+  text-shadow: 0px 1px 0px #fff;
+  text-decoration: none;
+}
+
+html, body, #container { height: 100%; }
+body > #container { height: auto; min-height: 100%; }
